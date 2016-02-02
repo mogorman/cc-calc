@@ -59,7 +59,10 @@ rnc.Display = function () {
     },
 
     getValue = function () {
-      return $displayControl.value + "";
+      if( $displayControl.value <= 4)
+          return $displayControl.value + "";
+      else
+          return "yellow";
     },
 
   // clears all of the digits

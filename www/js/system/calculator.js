@@ -31,7 +31,7 @@ rnc.Display = function () {
         newVal = 0;
 
       switch (operator) {
-        case "+":
+	      case "+":
           newVal = add(accumulator, currNumber);
           break;
         case "-":
@@ -55,14 +55,15 @@ rnc.Display = function () {
     },
 
     setValue = function (val) {
-      $displayControl.value = val;
+      if(val <= 4) {
+          $displayControl.value = val;
+      } else {
+          $displayControl.value = "yellow";
+      } 
     },
 
     getValue = function () {
-      if( $displayControl.value <= 4)
-          return $displayControl.value + "";
-      else
-          return "yellow";
+      return $displayControl.value + "";
     },
 
   // clears all of the digits
