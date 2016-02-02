@@ -1,9 +1,3 @@
-/**
- * User: Troy
- * Date: 3/1/14
- * Time: 9:38 AM
- */
-
 
 var rnc = rnc || {};
 
@@ -149,7 +143,6 @@ rnc.Display = function () {
   };
 }();
 
-//(function (rnc, $) {
 rnc.calculator = function () {
   rnc.Display.init($("#displayPanel")[0]);
 
@@ -205,6 +198,3 @@ rnc.calculator = function () {
     return false;
   });
 }
-
-
-//}(rnc, jQuery));
