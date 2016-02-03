@@ -1,6 +1,38 @@
 
 var rnc = rnc || {};
 
+ function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+    function alertDismissed() {
+        // do something
+cordova.plugins.CordovaMqTTPlugin.connect({
+  port:5000,
+  url:"tcp://home.rldn.net",
+  success:function(s){
+cordova.plugins.CordovaMqTTPlugin.publish({
+   topic:"sampletopic",
+   payload:"hello from the plugin",
+  success:function(s){
+
+  },
+  error:function(e){
+
+  }
+});
+  },
+  error:function(e){
+
+  }
+});
+    }
+
+
 // Display in this case refers to the input type="text" above the buttons
 rnc.Display = function () {
   var $displayControl,
@@ -71,6 +103,7 @@ rnc.Display = function () {
       accumulator = null;
       equalsPressed = operatorSet = false;
       setValue("0");
+      showAlert();
     },
 
   // removes the last digit entered in the display

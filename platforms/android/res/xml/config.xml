@@ -8,6 +8,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="CordovaMqTTPlugin">
+        <param name="android-package" value="com.arcoirislabs.plugin.mqtt.CordovaMqTTPlugin" />
+    </feature>
     <name>Calc</name>
     <description>
         A PhoneGap Calculator

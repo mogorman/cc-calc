@@ -8,7 +8,7 @@ rnc.resolver.initialize(function () {
 
   if (typeof(StatusBar) !== "undefined") {
     console.log("Setting StatusBar");
-    StatusBar.overlaysWebView(false);
+    StatusBar.overlaysWebView(true);
     StatusBar.backgroundColorByHexString('#000000');
   } else {
     console.log("NO StatusBar");
